@@ -6,8 +6,11 @@
     apt:
       name: git
       state: present
+    when: ansible_os_family=="Debian"
 
   - name: i want to install wget
     apt:
       name: wget
       state: present
+    when: ansible_os_family=="Debian"
+  
